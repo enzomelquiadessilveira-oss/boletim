@@ -1,1 +1,200 @@
+/* =========================================================
+   BOLETIM DIGITAL - ESTILO JDM DRIFT / NEON RED & GOLD
+   ========================================================= */
 
+/* Reset básico e fontes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0b0b10;
+  color: #f0f0f5;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: radial-gradient(circle at top right, #ff003322, transparent 40%),
+                    radial-gradient(circle at bottom left, #ffd70011, transparent 40%);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Estilo Drift Neon */
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #12121c;
+  border: 2px solid #ff0033;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff003366, inset 0 0 15px #ff003322;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.logo-tag {
+  display: inline-block;
+  background-color: #ff0033;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px #ff0033;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
+}
+
+.subtitle {
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+  text-shadow: 0 0 8px #ffd700aa;
+}
+
+.student-name {
+  margin-top: 10px;
+  color: #aaaaee;
+  font-size: 1rem;
+}
+
+.student-name span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.card {
+  background: #141420;
+  border: 1px solid #ff003388;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px #ff0033aa;
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  color: #aaaabb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-shadow: 0 0 6px #ffd70088;
+}
+
+.card.highlight {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px #ffd70044;
+}
+
+.card-status {
+  display: block;
+  font-size: 0.75rem;
+  color: #00ff88;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Tabela Responsiva */
+.table-container {
+  background: #12121c;
+  border: 1px solid #ff003366;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  overflow-x: auto; /* Permite rolar de lado no celular */
+}
+
+.table-container h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 4px solid #ff0033;
+  padding-left: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #222233;
+}
+
+th {
+  background-color: #1a1a2a;
+  color: #ffd700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+tr:hover {
+  background-color: #1a1a2e;
+}
+
+/* Estilos de Situação */
+.status-bom {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+.status-atencao {
+  color: #ff3366;
+  font-weight: bold;
+}
+
+.status-indisponivel {
+  color: #8888a0;
+  font-style: italic;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+}
