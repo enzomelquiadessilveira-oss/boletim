@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,58 +14,81 @@
       <div class="logo-tag">JDM DRIFT EDITION</div>
       <h1>Boletim Digital</h1>
       <p class="subtitle">8º Ano — Ensino Fundamental</p>
-      <p class="student-name">Estudante: <span>Estudante Exemplo</span></p>
+      <p class="student-name">Estudante: <span>Estudante Exemplo</span> • Turma: <span>8B</span> • Chamada: <span>10</span></p>
     </header>
 
-    <!-- Área de Cards de Resumo -->
-    <section class="cards-grid">
-      <div class="card">
-        <h3>Média Geral</h3>
-        <p id="card-media" class="card-value">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-faltas" class="card-value">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom" class="card-value">—</p>
-      </div>
-
-      <div class="card">
-        <h3>Precisa de Atenção</h3>
-        <p id="card-atencao" class="card-value">—</p>
-      </div>
-
-      <div class="card highlight">
-        <h3>Frequência</h3>
-        <p id="card-frequencia" class="card-value">92%</p>
-        <span class="card-status">Frequência adequada</span>
-      </div>
+    <!-- Área de Acesso por PIN -->
+    <section id="area-acesso" class="auth-card">
+      <h2>Acesso ao Boletim</h2>
+      <p class="auth-info">Turma: <strong>8B</strong> | Chamada: <strong>10</strong></p>
+      <form id="form-login" class="auth-form">
+        <label for="input-pin" class="sr-only">PIN de acesso</label>
+        <input type="password" id="input-pin" placeholder="Digite seu PIN" required autocomplete="off">
+        <button type="submit" id="btn-entrar" class="btn-neon">Entrar</button>
+      </form>
+      <p id="mensagem-login" class="status-msg"></p>
     </section>
 
-    <!-- Tabela de Disciplinas -->
-    <section class="table-container">
-      <h2>Desempenho por Disciplina</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>1º Tri</th>
-            <th>2º Tri</th>
-            <th>3º Tri</th>
-            <th>Média</th>
-            <th>Faltas</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody id="tabela-corpo">
-          <!-- As 15 disciplinas serão inseridas aqui automaticamente pelo JavaScript -->
-        </tbody>
-      </table>
-    </section>
+    <!-- Área Protegida do Boletim -->
+    <main id="area-boletim" class="hidden">
+      <!-- Área de Cards de Resumo -->
+      <section class="cards-grid">
+        <div class="card">
+          <h3>Média Geral</h3>
+          <p id="card-media" class="card-value">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas" class="card-value">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom" class="card-value">—</p>
+        </div>
+
+        <div class="card">
+          <h3>Precisa de Atenção</h3>
+          <p id="card-atencao" class="card-value">—</p>
+        </div>
+
+        <div class="card highlight">
+          <h3>Frequência</h3>
+          <p id="card-frequencia" class="card-value">92%</p>
+          <span class="card-status">Frequência adequada</span>
+        </div>
+      </section>
+
+      <!-- Tabela de Disciplinas -->
+      <section class="table-container">
+        <div class="table-header-bar">
+          <h2>Desempenho por Disciplina</h2>
+          <div class="table-actions">
+            <button type="button" id="btn-alterar" class="btn-neon btn-gold">Alterar dados</button>
+            <button type="button" id="btn-salvar" class="btn-neon hidden">Salvar alterações</button>
+            <button type="button" id="btn-cancelar" class="btn-secondary hidden">Cancelar</button>
+          </div>
+        </div>
+        <p id="mensagem-edicao" class="status-msg"></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo">
+            <!-- As 15 disciplinas serão inseridas aqui automaticamente pelo JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    </main>
   </div>
 
   <!-- Conectando o arquivo JavaScript -->
